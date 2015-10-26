@@ -8,8 +8,8 @@ namespace AForgeTest
     class Program
     {
         private static MotionDetector _motionDetector;
-        private static float _motionAlarmLevel = 0.03f;
-        private static bool hasMotion = false;
+        private static float _motionAlarmLevel = 0.05f;
+        private static bool _hasMotion;
 
         static void Main()
         {
@@ -34,17 +34,17 @@ namespace AForgeTest
 
             if (motionLevel > _motionAlarmLevel)
             {
-                if (hasMotion) return;
+                if (_hasMotion) return;
                 Console.WriteLine("Alarm motion started. Motion level: " + motionLevel);
-                hasMotion = true;
+                _hasMotion = true;
             }
             else
             {
-                if (hasMotion)
+                if (_hasMotion)
                 {
                     Console.WriteLine("Alarm motion stopped. Motion level: " + motionLevel);
                 }
-                hasMotion = false;
+                _hasMotion = false;
             }
         }
     }
