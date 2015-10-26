@@ -1,7 +1,5 @@
 # MotionDetector
-Detects motion from a camera. Motion detection is calculated by 
-
-the [AForge.NET](http://www.aforgenet.com/) library.
+Detects motion from a camera. Motion detection is calculated by the [AForge.NET](http://www.aforgenet.com/) library.
 
 Sample output:
 
